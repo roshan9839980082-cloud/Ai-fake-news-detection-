@@ -1,0 +1,6 @@
+Flask
+requests
+pymongo
+google-generativeai
+dnspython
+gunicorn
