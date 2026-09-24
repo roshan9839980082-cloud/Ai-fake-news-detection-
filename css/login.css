@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* margin-top: 100px; */
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+  flex-direction: column;
+}
+
+.main-container {
+  margin-top:100px;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom:80px;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.icon-box {
+  background-color: #0070f3;
+  color: white;
+  padding: 6px;
+  border-radius: 12px;
+  display: flex;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logo-text span {
+  color: #0070f3;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.header p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-google {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.btn-google svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-google:hover {
+  background: #f8fafc;
+}
+
+.btn-apple {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.btn-apple:hover {
+  background: #1e293b;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider span {
+  position: relative;
+  background: white;
+  padding: 0 12px;
+  color: #94a3b8;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Form Styling */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.label-row a {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: #94a3b8;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  background-color: #eff6ff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1e293b;
+  outline: none;
+}
+
+.input-wrapper input:focus {
+  border-color: #2563eb;
+}
+
+.btn-submit {
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.btn-submit:hover {
+  opacity: 0.95;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 24px;
+}
+
+.footer-text a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Site Footer Dark Theme */
+.site-footer {
+  background-color: #0b1120;
+  color: #94a3b8;
+  font-family: "Inter", sans-serif;
+  padding: 60px 0 30px 0;
+  width: 100%;
+}
+

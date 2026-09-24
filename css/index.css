@@ -1,0 +1,908 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin:0;
+  padding:0;
+  background-color: #f8fafc;
+}
+/* .profile:hover .dropdown{
+    display:block;
+} */
+.hero-section {
+  /* Background Image set karein */
+  background-image: url("../images/home page background image.jpeg");
+
+  /* Image screen ke size ke hisaab se scale ho, stretch na ho */
+  background-size: cover;
+
+  /* Image hamesha centre mein rahe */
+  background-position: center;
+
+  /* Image repeat na ho */
+  background-repeat: no-repeat;
+
+  /* Jab tak image load na ho tab tak ek plain color dikhe */
+  background-color: #f8fafc;
+  background-attachment: scroll;
+
+  /* Ensures height reaches the bottom of the viewport */
+  min-height: 100vh;
+  margin: 0;
+  height: auto;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+section {
+  display: flex;
+  flex-direction: column; /* Sabhi items vertically align honge */
+  align-items: center; /* Horizontally center cross-axis alignment */
+  justify-content: center; /* Main axis vertical centering (optional) */
+  padding-top: 100px;
+  width: 100%;
+}
+
+.gemini {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  margin-bottom: 25px;
+
+  background: #c1e7ff;
+  border: 1.5px solid #9ec1ff;
+  border-radius: 999px;
+
+  color: #1d56b3;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading Container */
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 800; /* Bold text */
+  line-height: 1;
+}
+
+/* First Line: "Detect Fake News" */
+.top-text {
+  color: #0f172a; /* Dark Navy / Charcoal color */
+  font-size: 80px;
+}
+
+/* Second Line: "in Seconds" with Gradient */
+.gradient-text {
+  font-size: 80px;
+
+  /* Blue to Cyan Gradient */
+  background: linear-gradient(90deg, #2563eb, #00b4d8);
+
+  /* Clip background to text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Container layout */
+.button-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+/* Base button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+/* 1. Primary Blue-Cyan Gradient Button */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #00b4d8 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-5px);
+}
+
+.btn-primary .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 2. Secondary White Outline Button */
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-5px);
+}
+
+.btn-secondary .arrow {
+  font-size: 18px;
+}
+
+/* Container ko page ke bottom me rakhne ke liye */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 850px;
+  margin: 50px auto 20px auto; /* Margin-top se niche shift ho jayega */
+  padding: 0 16px;
+}
+
+/* Base Card Styling */
+.card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Icon Color and Size */
+.card .icon {
+  width: 32px;
+  height: 32px;
+  color: #2563eb; /* Blue color */
+  margin-bottom: 12px;
+}
+
+.card .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Headings and Subtext */
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.card p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* First/Active Card (Blue Border + Shadow effect) */
+.card.active {
+  border-color: #e1e8f1;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+
+/* Hover Effect */
+.card:hover {
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
+
+/* Stats Section */
+.stats-section {
+  width: 100%;
+  min-height: 150px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 0px;
+  margin-bottom: 15px;
+
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  padding: 30px 0;
+}
+
+/* Individual Stat */
+.stat-box {
+  width: 220px;
+  text-align: center;
+}
+
+/* Icon */
+.stat-icon {
+  font-size: 28px;
+  color: #2878ff;
+  margin-bottom: 8px;
+}
+
+/* Number */
+.stat-box h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Description */
+.stat-box p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* News Feed Main Wrapper */
+.news-feed-section {
+  background-color: #f8fafc; /* Plain background */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container width alignment */
+.news-feed-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Header Text Styles */
+.news-header {
+  margin-bottom: 50px;
+}
+
+/* Live Feed Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e6f4ea;
+  color: #137333;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.news-header h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.news-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Empty State Card */
+.feed-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Globe Icon & Text */
+.globe-icon {
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.feed-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Features Section Main Wrapper */
+.features-section {
+  background-color: #ffffff; /* Plain white background */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Header Text Styles */
+.features-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.features-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.features-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+/* CSS Grid Layout (3 Columns) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Feature Card Box Style */
+.feature-card {
+  background-color: #f8fafc; /* Very light grey card background */
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Blue Rounded Icon Box */
+.icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #3b82f6; /* Blue background */
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Card Heading & Subtitle */
+.feature-card h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Responsive Support For Mobile & Tablets */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* How It Works Dark Section */
+.how-it-works-section {
+  background-color: #0b132b; /* Dark Blue/Black Theme */
+
+  /* CSS Grid Pattern Background Effect */
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.how-it-works-container {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* Header Text Styles */
+.how-it-works-header {
+  margin-bottom: 60px;
+}
+
+.how-it-works-header h2 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.how-it-works-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+/* Steps Grid (3 Columns) */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.step-card {
+  position: relative;
+  text-align: left;
+  padding-top: 20px;
+}
+
+/* Big Faded Background Numbers (01, 02, 03) */
+.step-number {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.07);
+  user-select: none;
+  z-index: 1;
+}
+
+/* Icon Box Style */
+.step-icon {
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  background-color: #2563eb; /* Blue Box */
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Card Text Styling */
+.step-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Learn More Button Styling */
+.how-it-works-action {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-learn-more {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Responsive Grid For Mobile & Tablets */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+/* Verdict Section Main Container */
+.verdict-section {
+  background-color: #ffffff; /* Plain White Background */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.verdict-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Header Text Styles */
+.verdict-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.verdict-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.verdict-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+/* Grid Layout (4 Columns) */
+.verdict-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Base Card Style */
+.verdict-card {
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: left;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.verdict-card:hover {
+  transform: translateY(-4px);
+}
+
+.verdict-icon {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.verdict-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.verdict-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* --- Color Theme Variations --- */
+
+/* 1. True (Green) */
+.card-true {
+  background-color: #f2fcf5;
+  border-color: #d1fae5;
+}
+.card-true .verdict-icon {
+  color: #10b981;
+}
+
+/* 2. False (Red) */
+.card-false {
+  background-color: #fff5f5;
+  border-color: #ffe4e6;
+}
+.card-false .verdict-icon {
+  color: #ef4444;
+}
+
+/* 3. Misleading (Yellow/Orange) */
+.card-misleading {
+  background-color: #fffbeb;
+  border-color: #fef3c7;
+}
+.card-misleading .verdict-icon {
+  color: #f59e0b;
+}
+
+/* 4. Unverified (Blue) */
+.card-unverified {
+  background-color: #f0f7ff;
+  border-color: #dbeafe;
+}
+.card-unverified .verdict-icon {
+  color: #2563eb;
+}
+
+/* Responsive Support For Tablets and Mobile */
+@media (max-width: 1024px) {
+  .verdict-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .verdict-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Main Wrapper */
+.site-footer {
+  background-color: #070d19; /* Dark Navy Background */
+  color: #94a3b8;
+  padding: 60px 20px 30px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Top Section Layout */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+/* Brand Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo h2 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.footer-logo h2 span {
+  color: #38bdf8; /* Blue Accent */
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 20px;
+  color: #94a3b8;
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* Navigation Link Columns */
+.footer-links-col h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-col li {
+  margin-bottom: 12px;
+}
+
+.footer-links-col a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links-col a:hover {
+  color: #ffffff;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+}
+
+
+/* Mobile Screen Fix (Under 768px) */
+@media (max-width: 768px) {
+  /* Hero section ki top padding badha dein taaki content navbar se niche shift ho jaye */
+  section {
+    padding-top: 120px !important; 
+  }
+
+  /* Gemini Pill Badge par thoda top spacing dein */
+  .gemini {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Bada text size mobile screen ke liye chota aur readable karein */
+  .top-text, 
+  .gradient-text {
+    font-size: 40px !important; 
+    line-height: 1.1;
+  }
+
+  /* Subtitle font aur spacing adjust karein */
+  .subtitle {
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* Action Buttons ko mobile par vertical stack karein */
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* Cards Layout ko adjust karein */
+  .cards-container {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  /* Accuracy Rate / Stats Section - Ek ke niche ek vertical stack karein */
+  .stats-section {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .stat-box {
+    width: 100% !important;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
